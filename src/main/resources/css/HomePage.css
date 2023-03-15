@@ -1,0 +1,63 @@
+root { 
+    display: block;
+   -fx-border-color: #f8f9f9;
+   -fx-background-radius: 20;
+   -fx-border-radius: 20;
+   -fx-padding: 10 10 10 10;
+}
+.root {
+-fx-background-color:   #f8f9f9;
+}
+.Region{
+	
+	-fx-background-color:#f8f9f9;
+  -fx-border-color:899292;
+}
+
+.Button{
+	-fx-background-color:   #d5d8dc ;
+	-fx-font-weight: bold;
+	-fx-font-size: 15;
+}
+.Button:hover{
+	-fx-background-color:  #eaeded;
+}
+
+
+
+
+.BarChart
+{
+	-fx-padding: 10 10 10 10;	
+	
+}
+ .menu-bar{
+  -fx-background-color:e2ebeb;
+  -fx-border-color:white;
+
+}
+
+.menu-bar .label {
+ 
+    -fx-font-family: "Times New Roman", Times, serif;
+    
+    -fx-text-fill: "black";
+
+}
+
+
+.menu:hover {
+    -fx-background-color: #9ea5a5;
+}
+
+.menu-item .label{
+     
+    -fx-label-line-length: 8;
+     
+}
+
+#CenterAnchorpane
+{
+	-fx-border-color: #2e8b57;
+    -fx-border-width: 2px;
+}

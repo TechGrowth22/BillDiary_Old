@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import java.util.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.billdiary.ui.AddSupplierController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="56.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Name" />
+            <Text layoutX="423.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+            <Text layoutX="56.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No." />
+            <Text layoutX="423.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" />
+            <Text layoutX="423.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" />
+            <Text layoutX="56.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email ID" />
+            <TextField fx:id="supplierName" layoutX="179.0" layoutY="112.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierCompany" layoutX="179.0" layoutY="157.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierMobileNO" layoutX="179.0" layoutY="194.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierPhoneNO" layoutX="179.0" layoutY="226.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierGovID" layoutX="179.0" layoutY="257.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierEmailID" layoutX="179.0" layoutY="298.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierFaxNO" layoutX="179.0" layoutY="329.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierwebsite" layoutX="179.0" layoutY="366.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierBillingRate" layoutX="179.0" layoutY="406.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextArea fx:id="supplierOtherInfo" layoutX="179.0" layoutY="446.0" prefHeight="42.0" prefWidth="189.0" />
+            <TextArea fx:id="supplierAddress" layoutX="556.0" layoutY="111.0" prefHeight="33.0" prefWidth="189.0" />
+            <TextField fx:id="supplierCity" layoutX="556.0" layoutY="157.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="supplierState" layoutX="556.0" layoutY="194.0" prefWidth="150.0" value="">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Maharashtra" />
+                     <String fx:value="Madhyapradesh" />
+                     <String fx:value="Karnataka" />
+                     <String fx:value="Gujarat" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="supplierCountry" layoutX="556.0" layoutY="234.0" prefWidth="150.0" value="">
+             <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="India" />
+                    <String fx:value="US" />
+                    <String fx:value="Africa" />
+                </FXCollections>
+            </items>
+            </ChoiceBox>
+            <TextField fx:id="supplierZipCode" layoutX="556.0" layoutY="265.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierUnpaidBalance" layoutX="556.0" layoutY="298.0" prefHeight="25.0" prefWidth="189.0" />
+            <DatePicker fx:id="asOfDate" layoutX="556.0" layoutY="329.0" />
+            <TextField fx:id="supplierAccountNO" layoutX="556.0" layoutY="366.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="supplierGstNO" layoutX="556.0" layoutY="406.0" prefHeight="25.0" prefWidth="189.0" />
+            <Button layoutX="587.0" layoutY="451.0" mnemonicParsing="false" onAction="#addSupplier" prefHeight="33.0" prefWidth="127.0" text="Save" />
+            <Text layoutX="423.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="State" />
+            <Text layoutX="56.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Information" />
+            <Text layoutX="56.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Company" />
+            <Text layoutX="423.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip Code" />
+            <Text layoutX="56.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone No." />
+            <Text layoutX="56.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GOV. ID No" />
+            <Text layoutX="56.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fax No" />
+            <Text layoutX="56.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Website" />
+            <Text layoutX="423.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unpaid Balance" />
+            <Text layoutX="423.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="As Of Date" />
+            <Text layoutX="423.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account NO" />
+            <Text layoutX="423.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GST NO" />
+            <Text layoutX="56.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Billing Rate" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>

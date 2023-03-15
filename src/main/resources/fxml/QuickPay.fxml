@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.billdiary.ui.QuickPayController">
+   <children>
+      <TitledPane alignment="CENTER" animated="false" contentDisplay="CENTER" layoutX="-3.0" layoutY="-3.0" prefHeight="606.0" prefWidth="808.0" text="Quick Bill Generation" textAlignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="796.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Text layoutX="17.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name" />
+                  <Text layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of Client" />
+                  <TextField fx:id="Name" layoutX="121.0" layoutY="49.0" />
+                  <Text layoutX="495.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue Date" />
+                  <DatePicker fx:id="todaydate" layoutX="577.0" layoutY="49.0" />
+                  <Text layoutX="32.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+                  <TextArea fx:id="address" layoutX="122.0" layoutY="87.0" prefHeight="52.0" prefWidth="147.0" />
+                  <Text layoutX="496.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone No" />
+                  <TextField fx:id="phoneno" layoutX="578.0" layoutY="92.0" prefHeight="25.0" prefWidth="172.0" />
+                  <Text layoutX="14.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of Product Purchased" wrappingWidth="92.2890625" />
+                  <TextField fx:id="NameofProduct" layoutX="121.0" layoutY="151.0" />
+                  <Text layoutX="279.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />
+                  <TextField fx:id="Quantity" layoutX="334.0" layoutY="151.0" />
+                  <Text layoutX="496.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount per Quantity" wrappingWidth="75.2890625" />
+                  <TextField fx:id="amount" layoutX="578.0" layoutY="152.0" prefHeight="25.0" prefWidth="173.0" />
+                  <Button layoutX="713.0" layoutY="198.0" mnemonicParsing="false" onAction="#AddToTable" text="ADD" />
+                  <TableView fx:id="billTable" layoutX="12.0" layoutY="235.0" prefHeight="168.0" prefWidth="763.0">
+                    <columns>
+                      <TableColumn fx:id="nameofProduct" prefWidth="199.0" text="Name of Product" />
+                      <TableColumn fx:id="quantity" minWidth="0.0" prefWidth="172.0" text="Quantity" />
+                        <TableColumn fx:id="amtperqauntity" prefWidth="167.0" text="Amount per Quanity" />
+                        <TableColumn fx:id="totalamt" prefWidth="135.0" text="Total amount" />
+                        <TableColumn fx:id="Delete" prefWidth="75.0" text="Action" />
+                    </columns>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </TableView>
+                  <Button layoutX="93.0" layoutY="413.0" mnemonicParsing="false" onAction="#deleteButtonClicked" text="Delete" />
+                  <TextField fx:id="total" layoutX="521.0" layoutY="421.0" />
+                  <Text layoutX="462.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" />
+                  <Text layoutX="460.0" layoutY="476.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount" />
+                  <TextField fx:id="Discount" layoutX="521.0" layoutY="459.0" prefHeight="25.0" prefWidth="42.0" promptText="In %" />
+                  <TextField fx:id="TotalAfterDiscount" layoutX="521.0" layoutY="497.0" />
+                  <Text layoutX="447.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Amount" />
+                  <Button layoutX="691.0" layoutY="497.0" mnemonicParsing="false" onAction="#generateBill" text="Generate Bill" />
+                  <TextField fx:id="CompanyName" layoutX="121.0" layoutY="7.0" />
+                  <Button layoutX="12.0" layoutY="413.0" mnemonicParsing="false" onAction="#AddPage" text="Add Row" />
+                  <ImageView fx:id="Logo" fitHeight="36.0" fitWidth="200.0" layoutX="570.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import java.util.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.billdiary.ui.AddCustomerController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="56.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name*" />
+            <Text layoutX="424.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+            <Text layoutX="56.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No.*" />
+            <Text layoutX="424.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" />
+            <Text layoutX="424.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" />
+            <Text layoutX="56.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email ID" />
+            <TextField fx:id="addCustomerName" layoutX="179.0" layoutY="112.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextArea fx:id="addAddress" layoutX="556.0" layoutY="111.0" prefHeight="33.0" prefWidth="189.0" />
+            <TextField fx:id="addMobileNo" layoutX="179.0" layoutY="194.0" prefHeight="25.0" prefWidth="189.0" />
+            <TextField fx:id="addEmailID" layoutX="179.0" layoutY="234.0" prefHeight="25.0" prefWidth="189.0" />
+            <ChoiceBox fx:id="addCountry" layoutX="556.0" layoutY="234.0" prefWidth="150.0" value="">
+             <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="India" />
+                    <String fx:value="US" />
+                    <String fx:value="Africa" />
+                </FXCollections>
+            </items>
+            </ChoiceBox>
+            <Button layoutX="573.0" layoutY="400.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="25.0" prefWidth="127.0" text="Save" />
+            <Text layoutX="424.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="State" />
+            <ChoiceBox fx:id="addState" layoutX="556.0" layoutY="194.0" prefWidth="150.0" value="">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Maharashtra" />
+                     <String fx:value="Madhyapradesh" />
+                     <String fx:value="Karnataka" />
+                     <String fx:value="Gujarat" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Text layoutX="56.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Information" />
+            <TextArea fx:id="addAdditionalInfo" layoutX="179.0" layoutY="281.0" prefHeight="42.0" prefWidth="189.0" />
+            <Text layoutX="56.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Group" />
+            <ChoiceBox fx:id="addCustomerGroup" layoutX="179.0" layoutY="157.0" prefWidth="150.0" value="">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="WholeSale" />
+                     <String fx:value="Retail" /> 
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Text layoutX="427.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip Code" />
+            <TextField fx:id="addZipCode" layoutX="556.0" layoutY="277.0" prefHeight="25.0" prefWidth="189.0" />
+            <Text layoutX="56.0" layoutY="355" strokeType="OUTSIDE" strokeWidth="0.0" text="Anniversary Date" />
+           <DatePicker fx:id="Anniversary_Date" layoutX="179" layoutY="350" />
+          <Text layoutX="56.0" layoutY="405" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date" />
+           <DatePicker fx:id="Birth_Date" layoutX="179" layoutY="400" />
+            <TextField fx:id="addCity" layoutX="556.0" layoutY="157.0" prefHeight="25.0" prefWidth="189.0" />
+            <Text layoutX="426.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance " />
+            <TextField fx:id="balance" layoutX="556.0" layoutY="316.0" prefHeight="25.0" prefWidth="189.0" />
+            <Text layoutX="430.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+            <ChoiceBox fx:id="status" layoutX="556.0" layoutY="356.0" prefWidth="150.0" >
+             <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="ACTIVE" />
+                     <String fx:value="INACTIVE" /> 
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

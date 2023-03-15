@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.cell.TextFieldTableCell?>
+
+<StackPane maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.billdiary.ui.ManageSupplierController">
+   <children>
+      <ScrollPane maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0">
+         <content>
+            <Pane maxHeight="600.0" maxWidth="995.0" minHeight="600.0" minWidth="990.0" prefHeight="600.0" prefWidth="995.0">
+               <children>
+                  <Text layoutX="43.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Name" />
+                  <TextField fx:id="supplierName" layoutX="140.0" layoutY="29.0" promptText="Enter Supllier Name" />
+                  <Text layoutX="43.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier ID" />
+                  <TextField fx:id="supplierID" layoutX="140.0" layoutY="81.0" />
+                  <Separator layoutX="8.0" layoutY="133.0" prefHeight="3.0" prefWidth="964.0" />
+                  <TableView fx:id="supplierTable" editable="false" layoutX="10.0" layoutY="146.0" prefHeight="245.0" prefWidth="960.0">
+                    <columns>
+                      <TableColumn id="supplierID" editable="false" prefWidth="75.0" text="ID">
+                            <cellValueFactory>
+							<PropertyValueFactory property="supplierID" />
+							</cellValueFactory>
+					  </TableColumn>
+                      <TableColumn id="supplierName" prefWidth="75.0" text="Name">
+                      		<cellValueFactory>
+							<PropertyValueFactory property="supplierName" />
+							</cellValueFactory>
+							<cellFactory>
+							<TextFieldTableCell fx:factory="forTableColumn" />
+							</cellFactory>	
+					  </TableColumn>
+                        <TableColumn id="supplierCompany" prefWidth="75.0" text="Company">
+                           <cellFactory>
+                              <TextFieldTableCell fx:factory="forTableColumn" />
+                           </cellFactory>
+                           <cellValueFactory>
+                              <PropertyValueFactory property="supplierCompany" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn id="supplierEmailID" prefWidth="75.0" text="EmailID">
+                         <cellValueFactory>
+                              <PropertyValueFactory property="supplierEmailID" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        
+                        <TableColumn id="supplierAddress" prefWidth="75.0" text="Address">
+                            <cellValueFactory>
+							<PropertyValueFactory property="supplierAddress" />
+							</cellValueFactory>
+							<cellFactory>
+							<TextFieldTableCell fx:factory="forTableColumn" />
+							</cellFactory>
+                        </TableColumn>
+                        <TableColumn id="supplierPhoneNo" prefWidth="75.0" text="Phone No">
+                           <cellFactory>
+                              <TextFieldTableCell fx:factory="forTableColumn" />
+                           </cellFactory>
+                           <cellValueFactory>
+                              <PropertyValueFactory property="supplierPhoneNo" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn id="supplierMobileNo" prefWidth="75.0" text="Mobile No">
+                        	<cellValueFactory>
+							<PropertyValueFactory property="supplierMobileNo" />
+							</cellValueFactory>
+							<cellFactory>
+							<TextFieldTableCell fx:factory="forTableColumn" />
+							</cellFactory>
+						</TableColumn>
+                        <TableColumn id="supplierUnpaidBalance" fx:id="supplierUnpaidBalance" prefWidth="75.0" text="Unpaid Bal.">
+                        	<cellValueFactory>
+							<PropertyValueFactory property="supplierUnpaidBalance" />
+							</cellValueFactory>
+							<cellFactory>
+							<TextFieldTableCell fx:factory="forTableColumn" />
+							</cellFactory>
+                        </TableColumn>
+                        <TableColumn id="supplierAsOfDate" prefWidth="75.0" text="AsOfDate">
+                           <cellFactory>
+                              <TextFieldTableCell fx:factory="forTableColumn" />
+                           </cellFactory>
+                           <cellValueFactory>
+                              <PropertyValueFactory property="asOfDateStr" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn id="supplierBillingRate" fx:id="supplierBillingRate" prefWidth="75.0" text="Billing Rate">
+                        	<cellValueFactory>
+							<PropertyValueFactory property="supplierBillingRate" />
+							</cellValueFactory>
+							<cellFactory>
+							<TextFieldTableCell fx:factory="forTableColumn" />
+							</cellFactory>
+                        </TableColumn>
+                        <TableColumn id="supplierOther" prefWidth="75.0" text="Other">
+                           <cellFactory>
+                              <TextFieldTableCell fx:factory="forTableColumn" />
+                           </cellFactory>
+                           <cellValueFactory>
+                              <PropertyValueFactory property="supplierOther" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" text="Action">
+                       		<cellValueFactory>
+								<PropertyValueFactory property="actionbox" />
+							</cellValueFactory>
+							
+						</TableColumn>
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Button layoutX="731.0" layoutY="102.0" mnemonicParsing="false" onAction="#showAddSupplier" prefHeight="25.0" prefWidth="116.0" text="New Supplier" />
+                  <Button layoutX="854.0" layoutY="102.0" mnemonicParsing="false" onAction="#searchSupplier" prefHeight="25.0" prefWidth="116.0" text="Search" />
+                  <Text layoutX="312.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile NO" />
+                  <TextField fx:id="suppliermobileNo" layoutX="386.0" layoutY="29.0" promptText="XXXXXXXXXX" />
+                  <Pagination fx:id="pagination" layoutX="770.0" layoutY="394.0" prefHeight="55.0" prefWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

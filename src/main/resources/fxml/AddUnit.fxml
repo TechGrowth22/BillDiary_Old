@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.billdiary.ui.AddUnitController">
+   <children>
+      <Pane prefHeight="311.0" prefWidth="400.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Separator layoutX="100.0" layoutY="38.0" prefWidth="200.0" />
+            <Text fontSmoothingType="LCD" layoutX="176.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Unit">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <TableView fx:id="unitTable" layoutX="21.0" layoutY="50.0" prefHeight="163.0" prefWidth="359.0">
+              <columns>
+                <TableColumn fx:id="unitId" prefWidth="75.0" text="Unit ID" >
+                            <cellValueFactory>
+							<PropertyValueFactory property="unitId" />
+							</cellValueFactory>
+				</TableColumn>			
+                <TableColumn fx:id="unitName" prefWidth="75.0" text="UnitName" >
+               				<cellValueFactory>
+							<PropertyValueFactory property="unitName" />
+							</cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Action" >
+                 			<cellValueFactory>
+							<PropertyValueFactory property="action" />
+							</cellValueFactory>
+                  </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField fx:id="addUnitName" layoutX="109.0" layoutY="225.0" />
+            <Text layoutX="21.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Name" />
+            <Button layoutX="300.0" layoutY="225.0" mnemonicParsing="false" onAction="#addUnit" prefHeight="25.0" prefWidth="51.0" text="Add" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>

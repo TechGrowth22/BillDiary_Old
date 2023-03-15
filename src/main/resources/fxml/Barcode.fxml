@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="650.0" prefWidth="1197.0" style="-fx-background-color: #F9FCFB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.billdiary.ui.ManageBarcodeController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #71EDC4; -fx-background-color: #fff;">
+         <StackPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </StackPane.margin>
+         <children>
+            <TabPane layoutX="489.0" layoutY="215.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="EAN_13">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ComboBox fx:id="countryDropdown" layoutX="185.0" layoutY="33.0" prefWidth="150.0" />
+                              <TextField fx:id="manfacturerCodeField" layoutX="185.0" layoutY="76.0" />
+                              <TextField fx:id="barcodeImageHeightField" layoutX="186.0" layoutY="117.0" />
+                              <TextField fx:id="barcodeImageWidthField" layoutX="186.0" layoutY="161.0" />
+                              <ComboBox fx:id="pageSizeListDropdown" layoutX="185.0" layoutY="202.0" prefWidth="150.0" />
+                              <ComboBox fx:id="generateBracodeForDropdown" layoutX="185.0" layoutY="242.0" prefWidth="150.0" />
+                              <Button layoutX="186.0" layoutY="311.0" mnemonicParsing="false" onAction="#generateBarcode" prefHeight="25.0" prefWidth="147.0" text="Generate Barcode " />
+                              <Button layoutX="30.0" layoutY="311.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="147.0" text="Reset" />
+                              <Text layoutX="30.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" />
+                              <Text layoutX="30.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manufactor Code" />
+                              <Text layoutX="394.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(It should be only 5 digit )" />
+                              <Text layoutX="343.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(0-9 only)" />
+                              <Text layoutX="30.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barcode height (mm)" />
+                              <Text layoutX="30.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barode width (mm)" />
+                              <Text layoutX="31.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate barcode for" />
+                              <Text layoutX="31.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page Size" />
+                              <TextField fx:id="productIdField" layoutX="343.0" layoutY="242.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

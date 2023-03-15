@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<HBox prefHeight="25.0" prefWidth="621.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.billdiary.ui.MenuBarController">
+	<!-- TODO Add Nodes -->
+	<children>
+            <MenuBar prefHeight="25.0" prefWidth="271.0" HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="New">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Invoice " />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Shop Info">
+                  <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addShopDetails" text="Add Shop Details" />
+                  <MenuItem mnemonicParsing="false" text="Logo Setup" />
+                  <MenuItem mnemonicParsing="false" text="Taxes" />
+                  </items>
+                </Menu>
+            <Menu mnemonicParsing="false" text="Shop Inventory">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Stock Availability" />
+                <MenuItem mnemonicParsing="false" text="Generate Barcode" onAction="#showBarcodeHandler" />
+              </items>
+            </Menu>
+             <Menu mnemonicParsing="false" text="Tax">
+              <items>
+                <MenuItem mnemonicParsing="false" text="GST add/modify/delete" onAction="#showGSTHandler" />
+              </items>
+            </Menu>
+                <Menu mnemonicParsing="false" onAction="#initialize" text="Tools">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Backup Data" />
+                  <MenuItem mnemonicParsing="false" text="Product/Services Report" />
+                  <MenuItem mnemonicParsing="false" text="Manage Suppliers" />
+                  </items>
+                </Menu>
+                <Menu id="quick" mnemonicParsing="false" text="Quick pay">
+              	 <items>
+               	   <MenuItem fx:id="quick" mnemonicParsing="false" onAction="#OpenQuickPay" text="Open Quick pay" />
+              	 </items>
+            	</Menu>
+              </menus>
+            </MenuBar>
+            <Region HBox.hgrow="ALWAYS" />
+            <MenuBar nodeOrientation="RIGHT_TO_LEFT" HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="Logout" />
+                <Menu mnemonicParsing="false" text="About">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Contact" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help" />
+            <Menu fx:id="rightMenu" mnemonicParsing="false" text="Language">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#setEnglishLanguage" text="English" />
+                  <MenuItem mnemonicParsing="false" onAction="#setHindiLanguage" text="Hindi" />
+               </items></Menu>
+              </menus>
+            </MenuBar>
+         </children>
+         <opaqueInsets>
+            <Insets top="2.0" />
+         </opaqueInsets>
+</HBox>

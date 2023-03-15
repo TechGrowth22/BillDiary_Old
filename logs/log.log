@@ -1,0 +1,917 @@
+2018-04-17 00:01:02 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 8016 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:01:02 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:01:02 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@73b46014: startup date [Tue Apr 17 00:01:02 IST 2018]; root of context hierarchy
+2018-04-17 00:01:05 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:01:06 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose start
+2018-04-17 00:01:06 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose synched
+2018-04-17 00:01:06 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose script done
+2018-04-17 00:01:06 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose end
+2018-04-17 00:01:06 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:01:06 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:01:06 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:01:06 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:01:07 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:01:07 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:01:07 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:01:07 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:01:08 [Thread-4] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Duplicate query mapping ProductEntity.getProductCode
+2018-04-17 00:01:08 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-17 00:01:08 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-17 00:01:08 [Thread-4] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-04-17 00:01:08 [Thread-4] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Duplicate query mapping ProductEntity.getProductCode
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:137)
+	at com.billdiary.BillDiaryApplication$1.call(BillDiaryApplication.java:124)
+	at com.billdiary.BillDiaryApplication$1.call(BillDiaryApplication.java:1)
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1423)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.DuplicateMappingException: Duplicate query mapping ProductEntity.getProductCode
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.checkQueryName(InFlightMetadataCollectorImpl.java:524)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.applyNamedQuery(InFlightMetadataCollectorImpl.java:518)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addNamedQuery(InFlightMetadataCollectorImpl.java:514)
+	at org.hibernate.cfg.annotations.QueryBinder.bindQuery(QueryBinder.java:76)
+	at org.hibernate.cfg.annotations.QueryBinder.bindQueries(QueryBinder.java:218)
+	at org.hibernate.cfg.AnnotationBinder.bindQueries(AnnotationBinder.java:358)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:535)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:249)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:222)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:265)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
+	... 18 common frames omitted
+2018-04-17 00:01:36 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 7140 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:01:36 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:01:36 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@71917a42: startup date [Tue Apr 17 00:01:36 IST 2018]; root of context hierarchy
+2018-04-17 00:01:40 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:01:41 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose start
+2018-04-17 00:01:41 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose synched
+2018-04-17 00:01:41 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose script done
+2018-04-17 00:01:41 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose end
+2018-04-17 00:01:41 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:01:41 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:01:41 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:01:41 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:01:41 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:01:41 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:01:41 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:01:42 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:01:44 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:01:44 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:01:44 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:01:44 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:01:44 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:01:44 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:01:44 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:01:44 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:01:44 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:01:46 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:01:46 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:01:46 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:01:46 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 11.617 seconds (JVM running for 14.0)
+2018-04-17 00:01:48 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:01:50 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:02:58 [JavaFX Application Thread] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@71917a42: startup date [Tue Apr 17 00:01:36 IST 2018]; root of context hierarchy
+2018-04-17 00:02:58 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2018-04-17 00:02:58 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2018-04-17 00:02:58 [JavaFX Application Thread] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:02:58 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-17 00:02:58 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-17 00:06:02 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 8092 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:06:02 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:06:02 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@9263111: startup date [Tue Apr 17 00:06:02 IST 2018]; root of context hierarchy
+2018-04-17 00:06:06 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:06:07 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose start
+2018-04-17 00:06:07 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose synched
+2018-04-17 00:06:07 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose script done
+2018-04-17 00:06:07 [Thread-4] INFO  hsqldb.db.HSQLDB62CAAC7377.ENGINE - checkpointClose end
+2018-04-17 00:06:07 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:06:07 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:06:07 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:06:07 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:06:07 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:06:07 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:06:07 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:06:08 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:06:10 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:06:10 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:06:10 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:06:10 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:06:10 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:06:10 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:06:11 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:06:11 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:06:11 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:06:13 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:06:13 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:06:13 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:06:13 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 11.818 seconds (JVM running for 14.167)
+2018-04-17 00:06:15 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:06:16 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:07:43 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 3612 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:07:43 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:07:43 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7f9c0442: startup date [Tue Apr 17 00:07:43 IST 2018]; root of context hierarchy
+2018-04-17 00:07:46 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:07:47 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - Checkpoint start
+2018-04-17 00:07:47 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose start
+2018-04-17 00:07:47 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose synched
+2018-04-17 00:07:47 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose script done
+2018-04-17 00:07:47 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose end
+2018-04-17 00:07:47 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - Checkpoint end - txts: 1
+2018-04-17 00:07:47 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:07:47 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:07:48 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:07:48 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:07:48 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:07:48 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:07:48 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:07:49 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:07:51 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:07:51 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:07:52 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:07:52 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:07:52 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:07:52 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:07:52 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:07:52 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:07:52 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:07:54 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:07:54 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:07:54 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:07:54 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 12.864 seconds (JVM running for 15.247)
+2018-04-17 00:07:56 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:07:57 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:09:28 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 2224 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:09:28 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:09:28 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4cfbb5a6: startup date [Tue Apr 17 00:09:28 IST 2018]; root of context hierarchy
+2018-04-17 00:09:31 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:09:32 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose start
+2018-04-17 00:09:32 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose synched
+2018-04-17 00:09:32 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose script done
+2018-04-17 00:09:32 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose end
+2018-04-17 00:09:32 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:09:32 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:09:33 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:09:33 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:09:33 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:09:33 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:09:34 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:09:34 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:09:37 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:09:37 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:09:37 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:09:37 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:09:37 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:09:37 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:09:37 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:09:38 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:09:38 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:09:40 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:09:40 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:09:40 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:09:40 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 12.968 seconds (JVM running for 15.227)
+2018-04-17 00:09:42 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:09:43 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:20:42 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 5212 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:20:42 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:20:42 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2e7e2875: startup date [Tue Apr 17 00:20:42 IST 2018]; root of context hierarchy
+2018-04-17 00:20:45 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:20:46 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:20:46 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:20:46 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:20:46 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:20:46 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:20:46 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:20:47 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:20:47 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:20:49 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:20:49 [Thread-4] ERROR o.h.internal.SessionFactoryImpl - HHH000177: Error in named query: ProductEntity.getProductCode
+org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+ \-[METHOD_CALL] MethodNode: '('
+    +-[METHOD_NAME] IdentNode: 'IFNULL' {originalText=IFNULL}
+    \-[EXPR_LIST] SqlNode: 'exprList'
+       +-[AGGREGATE] AggregateNode: 'max'
+       |  \-[DOT] DotNode: 'productent0_.product_code' {propertyName=productCode,dereferenceType=PRIMITIVE,getPropertyPath=productCode,path=product.productCode,tableAlias=productent0_,className=com.billdiary.entities.ProductEntity,classAlias=product}
+       |     +-[ALIAS_REF] IdentNode: 'productent0_.product_id' {alias=product, className=com.billdiary.entities.ProductEntity, tableAlias=productent0_}
+       |     \-[IDENT] IdentNode: 'productCode' {originalText=productCode}
+       \-[NUM_INT] LiteralNode: '100'
+ [select IFNULL(max(product.productCode),100) from com.billdiary.entities.ProductEntity product]
+	at org.hibernate.QueryException.generateQueryException(QueryException.java:120)
+	at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:103)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:217)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:141)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:77)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.query.spi.NamedQueryRepository.checkNamedQueries(NamedQueryRepository.java:157)
+	at org.hibernate.internal.SessionFactoryImpl.checkNamedQueries(SessionFactoryImpl.java:533)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:892)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:137)
+	at com.billdiary.BillDiaryApplication$1.call(BillDiaryApplication.java:124)
+	at com.billdiary.BillDiaryApplication$1.call(BillDiaryApplication.java:1)
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1423)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+ \-[METHOD_CALL] MethodNode: '('
+    +-[METHOD_NAME] IdentNode: 'IFNULL' {originalText=IFNULL}
+    \-[EXPR_LIST] SqlNode: 'exprList'
+       +-[AGGREGATE] AggregateNode: 'max'
+       |  \-[DOT] DotNode: 'productent0_.product_code' {propertyName=productCode,dereferenceType=PRIMITIVE,getPropertyPath=productCode,path=product.productCode,tableAlias=productent0_,className=com.billdiary.entities.ProductEntity,classAlias=product}
+       |     +-[ALIAS_REF] IdentNode: 'productent0_.product_id' {alias=product, className=com.billdiary.entities.ProductEntity, tableAlias=productent0_}
+       |     \-[IDENT] IdentNode: 'productCode' {originalText=productCode}
+       \-[NUM_INT] LiteralNode: '100'
+
+	at org.hibernate.hql.internal.ast.tree.SelectClause.initializeExplicitSelectClause(SelectClause.java:160)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.useSelectClause(HqlSqlWalker.java:1013)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.processQuery(HqlSqlWalker.java:781)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:677)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:313)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:261)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:266)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	... 34 common frames omitted
+2018-04-17 00:20:49 [Thread-4] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.HibernateException: Errors in named queries: 
+ProductEntity.getProductCode failed because of: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+ \-[METHOD_CALL] MethodNode: '('
+    +-[METHOD_NAME] IdentNode: 'IFNULL' {originalText=IFNULL}
+    \-[EXPR_LIST] SqlNode: 'exprList'
+       +-[AGGREGATE] AggregateNode: 'max'
+       |  \-[DOT] DotNode: 'productent0_.product_code' {propertyName=productCode,dereferenceType=PRIMITIVE,getPropertyPath=productCode,path=product.productCode,tableAlias=productent0_,className=com.billdiary.entities.ProductEntity,classAlias=product}
+       |     +-[ALIAS_REF] IdentNode: 'productent0_.product_id' {alias=product, className=com.billdiary.entities.ProductEntity, tableAlias=productent0_}
+       |     \-[IDENT] IdentNode: 'productCode' {originalText=productCode}
+       \-[NUM_INT] LiteralNode: '100'
+ [select IFNULL(max(product.productCode),100) from com.billdiary.entities.ProductEntity product]
+2018-04-17 00:20:49 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-17 00:20:49 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-17 00:20:49 [Thread-4] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-04-17 00:20:49 [Thread-4] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.HibernateException: Errors in named queries: 
+ProductEntity.getProductCode failed because of: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+ \-[METHOD_CALL] MethodNode: '('
+    +-[METHOD_NAME] IdentNode: 'IFNULL' {originalText=IFNULL}
+    \-[EXPR_LIST] SqlNode: 'exprList'
+       +-[AGGREGATE] AggregateNode: 'max'
+       |  \-[DOT] DotNode: 'productent0_.product_code' {propertyName=productCode,dereferenceType=PRIMITIVE,getPropertyPath=productCode,path=product.productCode,tableAlias=productent0_,className=com.billdiary.entities.ProductEntity,classAlias=product}
+       |     +-[ALIAS_REF] IdentNode: 'productent0_.product_id' {alias=product, className=com.billdiary.entities.ProductEntity, tableAlias=productent0_}
+       |     \-[IDENT] IdentNode: 'productCode' {originalText=productCode}
+       \-[NUM_INT] LiteralNode: '100'
+ [select IFNULL(max(product.productCode),100) from com.billdiary.entities.ProductEntity product]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:137)
+	at com.billdiary.BillDiaryApplication$1.call(BillDiaryApplication.java:124)
+	at com.billdiary.BillDiaryApplication$1.call(BillDiaryApplication.java:1)
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1423)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.HibernateException: Errors in named queries: 
+ProductEntity.getProductCode failed because of: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+ \-[METHOD_CALL] MethodNode: '('
+    +-[METHOD_NAME] IdentNode: 'IFNULL' {originalText=IFNULL}
+    \-[EXPR_LIST] SqlNode: 'exprList'
+       +-[AGGREGATE] AggregateNode: 'max'
+       |  \-[DOT] DotNode: 'productent0_.product_code' {propertyName=productCode,dereferenceType=PRIMITIVE,getPropertyPath=productCode,path=product.productCode,tableAlias=productent0_,className=com.billdiary.entities.ProductEntity,classAlias=product}
+       |     +-[ALIAS_REF] IdentNode: 'productent0_.product_id' {alias=product, className=com.billdiary.entities.ProductEntity, tableAlias=productent0_}
+       |     \-[IDENT] IdentNode: 'productCode' {originalText=productCode}
+       \-[NUM_INT] LiteralNode: '100'
+ [select IFNULL(max(product.productCode),100) from com.billdiary.entities.ProductEntity product]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
+	... 18 common frames omitted
+Caused by: org.hibernate.HibernateException: Errors in named queries: 
+ProductEntity.getProductCode failed because of: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.MethodNode 
+ \-[METHOD_CALL] MethodNode: '('
+    +-[METHOD_NAME] IdentNode: 'IFNULL' {originalText=IFNULL}
+    \-[EXPR_LIST] SqlNode: 'exprList'
+       +-[AGGREGATE] AggregateNode: 'max'
+       |  \-[DOT] DotNode: 'productent0_.product_code' {propertyName=productCode,dereferenceType=PRIMITIVE,getPropertyPath=productCode,path=product.productCode,tableAlias=productent0_,className=com.billdiary.entities.ProductEntity,classAlias=product}
+       |     +-[ALIAS_REF] IdentNode: 'productent0_.product_id' {alias=product, className=com.billdiary.entities.ProductEntity, tableAlias=productent0_}
+       |     \-[IDENT] IdentNode: 'productCode' {originalText=productCode}
+       \-[NUM_INT] LiteralNode: '100'
+ [select IFNULL(max(product.productCode),100) from com.billdiary.entities.ProductEntity product]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:337)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:892)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 22 common frames omitted
+2018-04-17 00:27:15 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 7792 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:27:15 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:27:15 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3dc06283: startup date [Tue Apr 17 00:27:15 IST 2018]; root of context hierarchy
+2018-04-17 00:27:19 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:27:19 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose start
+2018-04-17 00:27:19 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose synched
+2018-04-17 00:27:19 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose script done
+2018-04-17 00:27:20 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose end
+2018-04-17 00:27:20 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:27:20 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:27:20 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:27:20 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:27:20 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:27:20 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:27:20 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:27:21 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:27:23 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:27:23 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:27:23 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:27:23 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:27:23 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:27:23 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:27:23 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:27:23 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:27:23 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:27:25 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:27:25 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:27:25 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:27:25 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 11.769 seconds (JVM running for 14.836)
+2018-04-17 00:27:27 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:27:29 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:28:08 [Thread-12] INFO  c.billdiary.service.CustomerService - Entering in getCustomers
+2018-04-17 00:28:08 [Thread-12] INFO  c.billdiary.service.CustomerService - Exiting in getCustomers
+2018-04-17 00:28:47 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 6812 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:28:47 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:28:47 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@38c829e2: startup date [Tue Apr 17 00:28:47 IST 2018]; root of context hierarchy
+2018-04-17 00:28:50 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:28:51 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose start
+2018-04-17 00:28:51 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose synched
+2018-04-17 00:28:51 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose script done
+2018-04-17 00:28:51 [Thread-4] INFO  hsqldb.db.HSQLDB62CFBFA92F.ENGINE - checkpointClose end
+2018-04-17 00:28:51 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:28:51 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:28:51 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:28:52 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:28:52 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:28:52 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:28:52 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:28:52 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:28:54 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:28:54 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:28:54 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:28:55 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:28:55 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:28:55 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:28:55 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:28:55 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:28:55 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:28:57 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:28:57 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:28:57 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:28:57 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 11.311 seconds (JVM running for 13.672)
+2018-04-17 00:28:59 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:29:01 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:29:42 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 5208 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:29:42 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:29:42 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@15f8f265: startup date [Tue Apr 17 00:29:42 IST 2018]; root of context hierarchy
+2018-04-17 00:29:46 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:29:47 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:29:47 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:29:47 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:29:47 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:29:47 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:29:47 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:29:47 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:29:48 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:29:50 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:29:50 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:29:50 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:29:50 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:29:50 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:29:50 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:29:50 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:29:50 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:29:50 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:29:52 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:29:52 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:29:52 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:29:52 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 11.575 seconds (JVM running for 14.019)
+2018-04-17 00:29:54 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:29:55 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:31:02 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 5216 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:31:02 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:31:02 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@674130cc: startup date [Tue Apr 17 00:31:02 IST 2018]; root of context hierarchy
+2018-04-17 00:31:06 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:31:06 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - Checkpoint start
+2018-04-17 00:31:06 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose start
+2018-04-17 00:31:07 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose synched
+2018-04-17 00:31:07 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose script done
+2018-04-17 00:31:07 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose end
+2018-04-17 00:31:07 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - Checkpoint end - txts: 1
+2018-04-17 00:31:07 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:31:07 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:31:07 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:31:07 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:31:08 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:31:08 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:31:08 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:31:08 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:31:11 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:31:11 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:31:11 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:31:11 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:31:11 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:31:12 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:31:12 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:31:12 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:31:12 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:31:14 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:31:14 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:31:14 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:31:14 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 12.902 seconds (JVM running for 16.065)
+2018-04-17 00:31:16 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:31:18 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:33:40 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 6920 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:33:40 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:33:40 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@271fc8c3: startup date [Tue Apr 17 00:33:40 IST 2018]; root of context hierarchy
+2018-04-17 00:33:43 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:33:44 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose start
+2018-04-17 00:33:44 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose synched
+2018-04-17 00:33:44 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose script done
+2018-04-17 00:33:44 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose end
+2018-04-17 00:33:44 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:33:44 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:33:45 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:33:45 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:33:45 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:33:45 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:33:45 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:33:45 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:33:47 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:33:47 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:33:48 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:33:48 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:33:48 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:33:48 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:33:48 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:33:48 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:33:48 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:33:50 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:33:50 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:33:50 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:33:50 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 12.102 seconds (JVM running for 15.096)
+2018-04-17 00:33:52 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:33:54 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:34:15 [JavaFX Application Thread] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@271fc8c3: startup date [Tue Apr 17 00:33:40 IST 2018]; root of context hierarchy
+2018-04-17 00:34:15 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2018-04-17 00:34:15 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2018-04-17 00:34:15 [JavaFX Application Thread] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:34:15 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-17 00:34:15 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-17 00:37:15 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 4276 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:37:15 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:37:16 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@10b6326d: startup date [Tue Apr 17 00:37:16 IST 2018]; root of context hierarchy
+2018-04-17 00:37:19 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:37:20 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose start
+2018-04-17 00:37:20 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose synched
+2018-04-17 00:37:20 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose script done
+2018-04-17 00:37:20 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose end
+2018-04-17 00:37:20 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:37:20 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:37:20 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:37:21 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:37:21 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:37:21 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:37:21 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:37:21 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:37:23 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:37:23 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:37:24 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:37:24 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:37:24 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:37:24 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:37:24 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:37:24 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:37:24 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:37:26 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:37:26 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:37:26 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:37:26 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 12.248 seconds (JVM running for 14.543)
+2018-04-17 00:37:28 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:37:30 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:39:47 [JavaFX Application Thread] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@10b6326d: startup date [Tue Apr 17 00:37:16 IST 2018]; root of context hierarchy
+2018-04-17 00:39:47 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2018-04-17 00:39:47 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2018-04-17 00:39:47 [JavaFX Application Thread] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:39:47 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-17 00:39:47 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-17 00:46:20 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 1964 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:46:20 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:46:21 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@229185d0: startup date [Tue Apr 17 00:46:21 IST 2018]; root of context hierarchy
+2018-04-17 00:46:24 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:46:25 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose start
+2018-04-17 00:46:25 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose synched
+2018-04-17 00:46:25 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose script done
+2018-04-17 00:46:25 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose end
+2018-04-17 00:46:25 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:46:25 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:46:25 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:46:25 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:46:25 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:46:26 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:46:26 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:46:26 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:46:28 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:46:28 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:46:28 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:46:28 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:46:28 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:46:28 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:46:28 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:46:28 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:46:28 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:46:31 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:46:31 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:46:31 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:46:31 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 11.564 seconds (JVM running for 13.797)
+2018-04-17 00:46:32 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:46:34 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:47:18 [JavaFX Application Thread] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@229185d0: startup date [Tue Apr 17 00:46:21 IST 2018]; root of context hierarchy
+2018-04-17 00:47:18 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2018-04-17 00:47:18 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2018-04-17 00:47:18 [JavaFX Application Thread] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:47:18 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-17 00:47:18 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-17 00:52:33 [Thread-4] INFO  o.s.boot.SpringApplication - Starting application on Avleen-PC with PID 4400 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:52:33 [Thread-4] INFO  o.s.boot.SpringApplication - No active profile set, falling back to default profiles: default
+2018-04-17 00:52:33 [Thread-4] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@499efdac: startup date [Tue Apr 17 00:52:33 IST 2018]; root of context hierarchy
+2018-04-17 00:52:36 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:52:37 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose start
+2018-04-17 00:52:37 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose synched
+2018-04-17 00:52:37 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose script done
+2018-04-17 00:52:37 [Thread-4] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose end
+2018-04-17 00:52:37 [Thread-4] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:52:37 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:52:37 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:52:38 [Thread-4] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:52:38 [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:52:38 [Thread-4] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:52:38 [Thread-4] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:52:38 [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:52:40 [Thread-4] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:52:40 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:52:41 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:52:41 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:52:41 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:52:41 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:52:41 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:52:41 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:52:41 [Thread-4] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:52:43 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-04-17 00:52:43 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-04-17 00:52:43 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-04-17 00:52:43 [Thread-4] INFO  o.s.boot.SpringApplication - Started application in 11.76 seconds (JVM running for 14.222)
+2018-04-17 00:52:45 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Inside the handleSignInButtonAction
+2018-04-17 00:52:47 [JavaFX Application Thread] INFO  com.billdiary.ui.LoginController - Exit the  handleSignInButtonAction
+2018-04-17 00:52:52 [JavaFX Application Thread] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@499efdac: startup date [Tue Apr 17 00:52:33 IST 2018]; root of context hierarchy
+2018-04-17 00:52:52 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2018-04-17 00:52:52 [JavaFX Application Thread] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2018-04-17 00:52:52 [JavaFX Application Thread] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:52:52 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-17 00:52:52 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-17 00:54:19 [main] INFO  c.b.BillDiaryApplicationTests - Starting BillDiaryApplicationTests on Avleen-PC with PID 4204 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:54:19 [main] INFO  c.b.BillDiaryApplicationTests - No active profile set, falling back to default profiles: default
+2018-04-17 00:54:19 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1be2019a: startup date [Tue Apr 17 00:54:19 IST 2018]; root of context hierarchy
+2018-04-17 00:54:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-04-17 00:54:25 [main] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose start
+2018-04-17 00:54:25 [main] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose synched
+2018-04-17 00:54:25 [main] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose script done
+2018-04-17 00:54:25 [main] INFO  hsqldb.db.HSQLDB62CFD504FD.ENGINE - checkpointClose end
+2018-04-17 00:54:25 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:54:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-04-17 00:54:25 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:54:25 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:54:25 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.2.16.Final}
+2018-04-17 00:54:25 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-04-17 00:54:26 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-04-17 00:54:26 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:54:29 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:54:30 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:54:30 [main] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:54:30 [main] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:54:30 [main] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:54:30 [main] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:54:30 [main] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:54:30 [main] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:54:30 [main] INFO  o.s.aop.framework.CglibAopProxy - Final method [public final void com.billdiary.dao.AbstractJpaDAO.setClazz(java.lang.Class)] cannot get proxied via CGLIB: Calls to this method will NOT be routed to the target instance and might lead to NPEs against uninitialized fields in the proxy instance.
+2018-04-17 00:54:32 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'AddCustomerController' defined in file [C:\Users\Avleen\git\Acceptance\BillDiary\target\classes\com\billdiary\ui\AddCustomerController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.billdiary.ui.AddCustomerController]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+2018-04-17 00:54:32 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:54:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-04-17 00:54:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-04-17 00:54:32 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-04-17 00:54:32 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'AddCustomerController' defined in file [C:\Users\Avleen\git\Acceptance\BillDiary\target\classes\com\billdiary\ui\AddCustomerController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.billdiary.ui.AddCustomerController]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.billdiary.ui.AddCustomerController]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:182)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1224)
+	... 44 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: null
+	at org.controlsfx.validation.ValidationSupport.<init>(ValidationSupport.java:221)
+	at com.billdiary.ui.AddCustomerController.<init>(AddCustomerController.java:42)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170)
+	... 46 common frames omitted
+Caused by: java.lang.RuntimeException: Internal graphics not initialized yet
+	at com.sun.glass.ui.Screen.getScreens(Screen.java:70)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.getScreens(QuantumToolkit.java:699)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.getMaxRenderScale(QuantumToolkit.java:719)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.loadImage(QuantumToolkit.java:727)
+	at javafx.scene.image.Image.loadImage(Image.java:1065)
+	at javafx.scene.image.Image.initialize(Image.java:807)
+	at javafx.scene.image.Image.<init>(Image.java:621)
+	at org.controlsfx.validation.decoration.GraphicValidationDecoration.<clinit>(GraphicValidationDecoration.java:61)
+	... 53 common frames omitted
+2018-04-17 00:54:32 [main] INFO  c.b.BillDiaryApplicationTests - Starting BillDiaryApplicationTests on Avleen-PC with PID 4204 (started by Avleen in C:\Users\Avleen\git\Acceptance\BillDiary)
+2018-04-17 00:54:32 [main] INFO  c.b.BillDiaryApplicationTests - No active profile set, falling back to default profiles: default
+2018-04-17 00:54:32 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@40943a6: startup date [Tue Apr 17 00:54:32 IST 2018]; root of context hierarchy
+2018-04-17 00:54:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2018-04-17 00:54:35 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. (feature not supported)
+2018-04-17 00:54:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2018-04-17 00:54:35 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:54:35 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-04-17 00:54:35 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-04-17 00:54:36 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-04-17 00:54:36 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:54:36 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'AddCustomerController' defined in file [C:\Users\Avleen\git\Acceptance\BillDiary\target\classes\com\billdiary\ui\AddCustomerController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.billdiary.ui.AddCustomerController]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class org.controlsfx.validation.decoration.GraphicValidationDecoration
+2018-04-17 00:54:36 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-04-17 00:54:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2018-04-17 00:54:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2018-04-17 00:54:36 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-04-17 00:54:36 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'AddCustomerController' defined in file [C:\Users\Avleen\git\Acceptance\BillDiary\target\classes\com\billdiary\ui\AddCustomerController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.billdiary.ui.AddCustomerController]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class org.controlsfx.validation.decoration.GraphicValidationDecoration
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1131) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138) [spring-boot-test-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.outputConditionEvaluationReport(SpringBootDependencyInjectionTestExecutionListener.java:54) [spring-boot-test-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:47) [spring-boot-test-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.billdiary.ui.AddCustomerController]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class org.controlsfx.validation.decoration.GraphicValidationDecoration
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:182) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 43 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.controlsfx.validation.decoration.GraphicValidationDecoration
+	at org.controlsfx.validation.ValidationSupport.<init>(ValidationSupport.java:221) ~[controlsfx-8.40.14.jar:8.40.14]
+	at com.billdiary.ui.AddCustomerController.<init>(AddCustomerController.java:42) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_161]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 45 common frames omitted
+2018-04-17 00:54:36 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5e5d171f] to prepare test instance [com.billdiary.BillDiaryApplicationTests@2e377400]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) ~[spring-boot-test-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125) [surefire-booter-2.21.0.jar:2.21.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413) [surefire-booter-2.21.0.jar:2.21.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'AddCustomerController' defined in file [C:\Users\Avleen\git\Acceptance\BillDiary\target\classes\com\billdiary\ui\AddCustomerController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.billdiary.ui.AddCustomerController]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1131) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138) ~[spring-boot-test-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117) ~[spring-test-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 28 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.billdiary.ui.AddCustomerController]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:182) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 44 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: null
+	at org.controlsfx.validation.ValidationSupport.<init>(ValidationSupport.java:221) ~[controlsfx-8.40.14.jar:8.40.14]
+	at com.billdiary.ui.AddCustomerController.<init>(AddCustomerController.java:42) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_161]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 46 common frames omitted
+Caused by: java.lang.RuntimeException: Internal graphics not initialized yet
+	at com.sun.glass.ui.Screen.getScreens(Screen.java:70) ~[jfxrt.jar:na]
+	at com.sun.javafx.tk.quantum.QuantumToolkit.getScreens(QuantumToolkit.java:699) ~[jfxrt.jar:na]
+	at com.sun.javafx.tk.quantum.QuantumToolkit.getMaxRenderScale(QuantumToolkit.java:719) ~[jfxrt.jar:na]
+	at com.sun.javafx.tk.quantum.QuantumToolkit.loadImage(QuantumToolkit.java:727) ~[jfxrt.jar:na]
+	at javafx.scene.image.Image.loadImage(Image.java:1065) ~[jfxrt.jar:na]
+	at javafx.scene.image.Image.initialize(Image.java:807) ~[jfxrt.jar:na]
+	at javafx.scene.image.Image.<init>(Image.java:621) ~[jfxrt.jar:na]
+	at org.controlsfx.validation.decoration.GraphicValidationDecoration.<clinit>(GraphicValidationDecoration.java:61) ~[controlsfx-8.40.14.jar:8.40.14]
+	... 53 common frames omitted
